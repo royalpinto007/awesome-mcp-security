@@ -1,0 +1,21 @@
+{
+  "name": "awesome-mcp-security",
+  "title": "Awesome MCP Security",
+  "tagline": "Tools, standards, and research for securing Model Context Protocol servers.",
+  "siteHost": "mcp-security.agentpostmortem.com",
+  "ghUrl": "https://github.com/royalpinto007/awesome-mcp-security",
+  "cats": {
+    "scanners": "Scanners and auditors",
+    "injection": "Tool poisoning and injection",
+    "guardrails": "Firewalls and guardrails",
+    "gateways": "Secure gateways and proxies",
+    "permission": "Permission, scope, sandboxing",
+    "secrets": "Secrets and exfiltration (DLP)",
+    "auth": "Authentication and authorization",
+    "offensive": "Offensive security and testing",
+    "targets": "Vulnerable-by-design targets",
+    "standards": "Spec and official guidance",
+    "research": "Research and papers",
+    "related": "Related lists"
+  }
+}
