@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Awesome MCP Security</title>
+<meta name="description" content="Tools, standards, and research for securing Model Context Protocol servers." />
+<style>
+  :root{ --bg:#0b0d10; --panel:#14181d; --panel2:#1b2027; --bd:#262d36; --tx:#e6edf3; --mut:#9aa7b4; --acc:#6ee7b7; --acc2:#38bdf8; --chip:#1f2630; }
+  @media (prefers-color-scheme: light){ :root{ --bg:#f7f8fa; --panel:#fff; --panel2:#f0f2f5; --bd:#e2e6eb; --tx:#0d1117; --mut:#586069; --acc:#059669; --acc2:#0284c7; --chip:#eef1f5; } }
+  *{box-sizing:border-box} html,body{overflow-x:hidden;max-width:100%}
+  body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--acc2);text-decoration:none} a:hover{text-decoration:underline}
+  .wrap{max-width:1160px;margin:0 auto;padding:clamp(16px,4vw,30px) clamp(14px,4vw,26px) 60px}
+  header h1{margin:0 0 4px;font-size:1.7rem;letter-spacing:-.02em} header h1 .g{color:var(--acc)}
+  header p{margin:0;color:var(--mut)}
+  .top{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:18px}
+  .ghlink{border:1px solid var(--bd);background:var(--panel);padding:7px 12px;border-radius:8px;color:var(--tx);font-weight:600;font-size:.86rem}
+  .controls{position:sticky;top:0;background:var(--bg);padding:12px 0;z-index:5;border-bottom:1px solid var(--bd);margin-bottom:16px}
+  #q{width:100%;padding:11px 14px;border:1px solid var(--bd);border-radius:10px;background:var(--panel);color:var(--tx);font-size:1rem;outline:none}
+  #q:focus{border-color:var(--acc2)}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px}
+  .chip{cursor:pointer;border:1px solid var(--bd);background:var(--chip);color:var(--mut);padding:5px 11px;border-radius:999px;font-size:.82rem;user-select:none}
+  .chip.on{background:var(--acc2);border-color:var(--acc2);color:#04121c;font-weight:700}
+  .count{color:var(--mut);font-size:.82rem;margin:6px 2px 14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:12px}
+  .card{border:1px solid var(--bd);background:var(--panel);border-radius:12px;padding:14px 15px;display:flex;flex-direction:column;gap:8px}
+  .card:hover{border-color:var(--acc2)}
+  .card .h{display:flex;align-items:center;justify-content:space-between;gap:8px}
+  .card .h a{font-weight:700;font-size:1.02rem;color:var(--tx)}
+  .stars{color:var(--mut);font-size:.8rem;white-space:nowrap}
+  .cat{font-size:.68rem;text-transform:uppercase;letter-spacing:.04em;color:var(--acc);font-weight:700}
+  .desc{color:var(--mut);font-size:.88rem;margin:0}
+  @media (max-width:520px){.top{flex-direction:column;align-items:flex-start}.card{padding:13px}}
+  footer{margin-top:34px;color:var(--mut);font-size:.82rem;text-align:center}
+  .empty{color:var(--mut);padding:40px 0;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <header><h1>Awesome MCP Security</h1><p>Tools, standards, and research for securing Model Context Protocol servers.</p></header>
+    <a class="ghlink" href="https://github.com/royalpinto007/awesome-mcp-security">Star on GitHub</a>
+  </div>
+  <div class="controls">
+    <input id="q" type="search" placeholder="Search..." autocomplete="off" />
+    <div class="chips" id="chips"></div>
+  </div>
+  <div class="count" id="count"></div>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" hidden>No matches. Try another term, or <a href="https://github.com/royalpinto007/awesome-mcp-security#contributing">add it</a>.</div>
+  <footer><span id="updated"></span> &middot; <a href="https://github.com/royalpinto007/awesome-mcp-security">Contribute</a> &middot; built by <a href="https://royalpinto007.agentpostmortem.com">Royal Pinto</a></footer>
+</div>
+<script>
+const DATA = [{"name":"invariantlabs mcp-scan","url":"https://github.com/invariantlabs-ai/mcp-scan","category":"scanners","desc":"Scans installed MCP servers and tool descriptions for tool poisoning, prompt injection, and cross-server shadowing; the most-referenced MCP scanner.","repo":"invariantlabs-ai/mcp-scan","stars":2844},{"name":"Cisco AI Defense mcp-scanner","url":"https://github.com/cisco-ai-defense/mcp-scanner","category":"scanners","desc":"Cisco AI Defense open-source scanner for detecting security risks in MCP servers.","repo":"cisco-ai-defense/mcp-scanner","stars":1000},{"name":"SecScanMCP","url":"https://github.com/zakariaf/SecScanMCP","category":"scanners","desc":"MCP scanner with 12+ analyzers, 117 YARA rules, and ML-assisted detection of prompt injection and tool poisoning.","repo":"zakariaf/SecScanMCP","stars":5},{"name":"Snyk agent-scan","url":"https://github.com/snyk/agent-scan","category":"scanners","desc":"Snyk tooling for scanning AI-agent and MCP configurations for tool-poisoning and related risks.","repo":"snyk/agent-scan","stars":2844},{"name":"mcpserver-audit","url":"https://github.com/ModelContextProtocol-Security/mcpserver-audit","category":"scanners","desc":"Community project for auditing MCP servers against a security baseline.","repo":"ModelContextProtocol-Security/mcpserver-audit","stars":21},{"name":"SlowMist MCP Security Checklist","url":"https://github.com/slowmist/MCP-Security-Checklist","category":"scanners","desc":"Practical security checklist for MCP servers, clients, and tool developers.","repo":"slowmist/MCP-Security-Checklist","stars":836},{"name":"mcp-injection-experiments","url":"https://github.com/invariantlabs-ai/mcp-injection-experiments","category":"injection","desc":"Reference code that reproduces MCP tool-poisoning and injection attacks.","repo":"invariantlabs-ai/mcp-injection-experiments","stars":200},{"name":"MCP Tool Poisoning Attacks (Invariant)","url":"https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks","category":"injection","desc":"Original disclosure defining tool poisoning via hidden instructions in MCP tool descriptions.","stars":null},{"name":"GitHub MCP exploited (Invariant)","url":"https://invariantlabs.ai/blog/mcp-github-vulnerability","category":"injection","desc":"Case study hijacking the GitHub MCP server via a malicious issue to reach private repos.","stars":null},{"name":"Toxic Flow Analysis (Invariant)","url":"https://invariantlabs.ai/blog/toxic-flow-analysis1","category":"injection","desc":"A 'toxic flows' prompt-injection class across agentic systems and MCP servers.","stars":null},{"name":"Indirect prompt injection in MCP (Microsoft)","url":"https://developer.microsoft.com/blog/protecting-against-indirect-injection-attacks-mcp","category":"injection","desc":"Microsoft guidance on mitigating indirect prompt injection in MCP tools.","stars":null},{"name":"Invariant Guardrails","url":"https://github.com/invariantlabs-ai/invariant","category":"guardrails","desc":"Rule-based guardrail layer that sits as an MCP/LLM proxy to intercept and check tool calls.","repo":"invariantlabs-ai/invariant","stars":437},{"name":"mcp-guard (General Analysis)","url":"https://github.com/General-Analysis/mcp-guard","category":"guardrails","desc":"Guardrail wrapper that filters malicious tool calls and responses for MCP servers.","repo":"General-Analysis/mcp-guard","stars":55},{"name":"MCP-Guard (GenTelLab)","url":"https://github.com/GenTelLab/MCP-Guard","category":"guardrails","desc":"Detection framework, with an accompanying paper, for defending MCP integrations.","repo":"GenTelLab/MCP-Guard","stars":21},{"name":"promptfoo MCP red-teaming","url":"https://www.promptfoo.dev/docs/red-team/mcp-security-testing/","category":"guardrails","desc":"promptfoo module for automated red-teaming and security testing of MCP servers.","stars":null},{"name":"ToolHive (Stacklok)","url":"https://github.com/stacklok/toolhive","category":"gateways","desc":"Platform to run and manage MCP servers locally or on Kubernetes with credential isolation and policy guardrails.","repo":"stacklok/toolhive","stars":1984},{"name":"mcp-gateway (Lasso)","url":"https://github.com/lasso-security/mcp-gateway","category":"gateways","desc":"Plugin-based open-source security gateway with token masking, PII detection, and prompt-injection filters.","repo":"lasso-security/mcp-gateway","stars":384},{"name":"secure-mcp-gateway (Enkrypt)","url":"https://github.com/enkryptai/secure-mcp-gateway","category":"gateways","desc":"Security gateway adding guardrails, auth, and monitoring in front of MCP servers.","repo":"enkryptai/secure-mcp-gateway","stars":57},{"name":"mcp-proxy","url":"https://github.com/sparfenyuk/mcp-proxy","category":"gateways","desc":"Widely used MCP proxy (stdio/SSE bridging) often deployed as a control and isolation point.","repo":"sparfenyuk/mcp-proxy","stars":2694},{"name":"agent-governance-toolkit (Microsoft)","url":"https://github.com/microsoft/agent-governance-toolkit","category":"permission","desc":"Toolkit for governance, access control, and policy over AI agents and MCP tools.","repo":"microsoft/agent-governance-toolkit","stars":5540},{"name":"clerk mcp-tools","url":"https://github.com/clerk/mcp-tools","category":"permission","desc":"Clerk libraries for adding scoped auth and permission handling to MCP servers.","repo":"clerk/mcp-tools","stars":48},{"name":"redact-mcp","url":"https://github.com/r3352/redact-mcp","category":"secrets","desc":"MCP component that redacts sensitive data flowing through tool calls.","repo":"r3352/redact-mcp","stars":6},{"name":"mcpauth","url":"https://github.com/mcpauth/mcpauth","category":"auth","desc":"OAuth/auth implementation for securing MCP server access.","repo":"mcpauth/mcpauth","stars":112},{"name":"MCP Authorization spec","url":"https://modelcontextprotocol.io/docs/tutorials/security/authorization","category":"auth","desc":"Official MCP authorization tutorial covering OAuth-based access control.","stars":null},{"name":"mcp-for-security","url":"https://github.com/cyproxio/mcp-for-security","category":"offensive","desc":"Collection of MCP servers wrapping offensive-security tools for pentest workflows.","repo":"cyproxio/mcp-for-security","stars":627},{"name":"mcp-security-hub (FuzzingLabs)","url":"https://github.com/FuzzingLabs/mcp-security-hub","category":"offensive","desc":"Hub of MCP security research, fuzzing, and tooling.","repo":"FuzzingLabs/mcp-security-hub","stars":754},{"name":"secops-mcp","url":"https://github.com/securityfortech/secops-mcp","category":"offensive","desc":"SecOps-oriented MCP server bundling security tools for agents.","repo":"securityfortech/secops-mcp","stars":204},{"name":"Damn Vulnerable MCP","url":"https://github.com/harishsg993010/damn-vulnerable-MCP-server","category":"targets","desc":"Reference vulnerable MCP with 10 graded challenges (injection, tool poisoning, rug-pull, shadowing).","repo":"harishsg993010/damn-vulnerable-MCP-server","stars":1324},{"name":"VulnerableMCP","url":"https://github.com/integsec/VulnerableMCP","category":"targets","desc":"Intentionally vulnerable MCP server with 20+ exploits for research, CTF, and training.","repo":"integsec/VulnerableMCP","stars":3},{"name":"mcp-vulnerabilities","url":"https://github.com/Tomby68/mcp-vulnerabilities","category":"targets","desc":"Hands-on demos of common MCP vulns with a deep dive on prompt injection.","repo":"Tomby68/mcp-vulnerabilities","stars":7},{"name":"MCP Security Best Practices (official)","url":"https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices","category":"standards","desc":"Official Model Context Protocol security best-practices documentation.","stars":null},{"name":"OWASP MCP Top 10","url":"https://owasp.org/www-project-mcp-top-10/","category":"standards","desc":"OWASP top-10 risk catalog for MCP (e.g. MCP03 Tool Poisoning).","stars":null},{"name":"OWASP MCP Security Cheat Sheet","url":"https://cheatsheetseries.owasp.org/cheatsheets/MCP_Security_Cheat_Sheet.html","category":"standards","desc":"Concise OWASP cheat sheet for securing MCP servers and clients.","stars":null},{"name":"OWASP Secure MCP Server Development Guide","url":"https://genai.owasp.org/resource/a-practical-guide-for-secure-mcp-server-development/","category":"standards","desc":"OWASP GenAI practical guide for building secure MCP servers.","stars":null},{"name":"NSA/CISA MCP Security guidance","url":"https://media.defense.gov/2026/Jun/02/2003943289/-1/-1/0/CSI_MCP_SECURITY.PDF","category":"standards","desc":"US government cybersecurity information sheet on securing MCP deployments.","stars":null},{"name":"CSA Agentic MCP Security Best Practices","url":"https://labs.cloudsecurityalliance.org/agentic/agentic-mcp-security-best-practices-v1/","category":"standards","desc":"Cloud Security Alliance best-practices framework for agentic and MCP security.","stars":null},{"name":"Red Hat: MCP security risks and controls","url":"https://www.redhat.com/en/blog/model-context-protocol-mcp-understanding-security-risks-and-controls","category":"standards","desc":"Vendor-neutral overview of the MCP threat model and mitigating controls.","stars":null},{"name":"MCP: Landscape, Security Threats, Future","url":"https://arxiv.org/abs/2503.23278","category":"research","desc":"Foundational survey mapping MCP's attack surface across the server lifecycle.","stars":null},{"name":"MCPXKIT","url":"https://arxiv.org/abs/2508.12538","category":"research","desc":"Toolkit and taxonomy implementing 31 MCP attack methods across four classes.","stars":null},{"name":"MCP Security Bench (MSB)","url":"https://arxiv.org/pdf/2510.15994","category":"research","desc":"Benchmark for evaluating attacks against MCP in LLM agents.","stars":null},{"name":"When MCP Servers Attack","url":"https://arxiv.org/pdf/2509.24272","category":"research","desc":"Threat taxonomy and feasibility study of malicious MCP servers with mitigations.","stars":null},{"name":"MCP-Guard framework (paper)","url":"https://arxiv.org/abs/2508.10991","category":"research","desc":"Layered detection framework for defending MCP tool interactions.","stars":null},{"name":"MindGuard: Tool Poisoning Detection","url":"https://arxiv.org/html/2508.20412v1","category":"research","desc":"Detection approach specifically targeting MCP tool-poisoning attacks.","stars":null},{"name":"awesome-secure-mcp-servers","url":"https://github.com/fuzzylabs/awesome-secure-mcp-servers","category":"related","desc":"List of MCP servers validated through the mcp-scan security pipeline.","repo":"fuzzylabs/awesome-secure-mcp-servers","stars":0},{"name":"mcp-audit","repo":"royalpinto007/MCP-audit","url":"https://github.com/royalpinto007/MCP-audit","category":"scanners","desc":"Security scanner for MCP servers: 18 rules, SARIF output, run with npx mcp-audit.","stars":0},{"name":"skill-audit","repo":"royalpinto007/Skill-audit","url":"https://github.com/royalpinto007/Skill-audit","category":"scanners","desc":"Security scanner for agent skills: 31 rules, prompt-injection and exfil detection, SARIF output.","stars":1}];
+const UPDATED = "2026-08-01";
+const CATS = {"scanners":"Scanners and auditors","injection":"Tool poisoning and injection","guardrails":"Firewalls and guardrails","gateways":"Secure gateways and proxies","permission":"Permission, scope, sandboxing","secrets":"Secrets and exfiltration (DLP)","auth":"Authentication and authorization","offensive":"Offensive security and testing","targets":"Vulnerable-by-design targets","standards":"Spec and official guidance","research":"Research and papers","related":"Related lists"};
+let active = "all", q = "";
+const chips = document.getElementById("chips");
+[["all","All"], ...Object.entries(CATS)].forEach(([k,label])=>{
+  const c=document.createElement("span"); c.className="chip"+(k==="all"?" on":""); c.textContent=label; c.dataset.k=k;
+  c.onclick=()=>{active=k;[...chips.children].forEach(x=>x.classList.toggle("on",x.dataset.k===k));render();};
+  chips.appendChild(c);
+});
+const qi=document.getElementById("q"); qi.oninput=()=>{q=qi.value.trim().toLowerCase();render();};
+function kfmt(n){return n==null?"":n>=1000?(n/1000).toFixed(1).replace(/\.0$/,"")+"k":""+n;}
+function render(){
+  const grid=document.getElementById("grid"); grid.innerHTML="";
+  const rows=DATA.filter(t=>{
+    if(active!=="all"&&t.category!==active) return false;
+    if(!q) return true;
+    return (t.name+" "+t.desc+" "+t.category).toLowerCase().includes(q);
+  }).sort((a,b)=>(b.stars||0)-(a.stars||0));
+  document.getElementById("count").textContent=rows.length+" of "+DATA.length+" shown";
+  document.getElementById("empty").hidden=rows.length>0;
+  for(const t of rows){
+    const el=document.createElement("div"); el.className="card";
+    el.innerHTML='<div class="cat">'+(CATS[t.category]||t.category)+'</div>'+
+      '<div class="h"><a href="'+t.url+'" target="_blank" rel="noopener">'+t.name+'</a>'+
+      (t.stars!=null?'<span class="stars">* '+kfmt(t.stars)+'</span>':'')+'</div>'+
+      '<p class="desc">'+t.desc+'</p>';
+    grid.appendChild(el);
+  }
+}
+document.getElementById("updated").textContent = UPDATED ? ("Star counts updated "+UPDATED) : "Community-curated";
+render();
+</script>
+</body>
+</html>
