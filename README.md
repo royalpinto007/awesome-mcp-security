@@ -17,12 +17,12 @@ MCP lets an agent call your tools. That power is the whole attack surface. A too
 **The one rule:** treat every tool description and every tool output as untrusted input, exactly like a web page. The categories below are the controls that make that practical.
 
 <!-- LIST:START -->
-**46 entries**, auto-refreshed weekly. Star counts updated **2026-08-01**. Browse the filterable version at **[mcp-security.agentpostmortem.com](https://mcp-security.agentpostmortem.com)**.
+**46 entries**, auto-refreshed weekly. Star counts updated **2026-08-03**. Browse the filterable version at **[mcp-security.agentpostmortem.com](https://mcp-security.agentpostmortem.com)**.
 
 ### Scanners and auditors
 
-- [invariantlabs mcp-scan](https://github.com/invariantlabs-ai/mcp-scan) `* 2.8k`: Scans installed MCP servers and tool descriptions for tool poisoning, prompt injection, and cross-server shadowing; the most-referenced MCP scanner.
-- [Snyk agent-scan](https://github.com/snyk/agent-scan) `* 2.8k`: Snyk tooling for scanning AI-agent and MCP configurations for tool-poisoning and related risks.
+- [invariantlabs mcp-scan](https://github.com/invariantlabs-ai/mcp-scan) `* 2.9k`: Scans installed MCP servers and tool descriptions for tool poisoning, prompt injection, and cross-server shadowing; the most-referenced MCP scanner.
+- [Snyk agent-scan](https://github.com/snyk/agent-scan) `* 2.9k`: Snyk tooling for scanning AI-agent and MCP configurations for tool-poisoning and related risks.
 - [Cisco AI Defense mcp-scanner](https://github.com/cisco-ai-defense/mcp-scanner) `* 1k`: Cisco AI Defense open-source scanner for detecting security risks in MCP servers.
 - [SlowMist MCP Security Checklist](https://github.com/slowmist/MCP-Security-Checklist) `* 836`: Practical security checklist for MCP servers, clients, and tool developers.
 - [mcpserver-audit](https://github.com/ModelContextProtocol-Security/mcpserver-audit) `* 21`: Community project for auditing MCP servers against a security baseline.
@@ -32,7 +32,7 @@ MCP lets an agent call your tools. That power is the whole attack surface. A too
 
 ### Tool poisoning and injection
 
-- [mcp-injection-experiments](https://github.com/invariantlabs-ai/mcp-injection-experiments) `* 200`: Reference code that reproduces MCP tool-poisoning and injection attacks.
+- [mcp-injection-experiments](https://github.com/invariantlabs-ai/mcp-injection-experiments) `* 201`: Reference code that reproduces MCP tool-poisoning and injection attacks.
 - [MCP Tool Poisoning Attacks (Invariant)](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks): Original disclosure defining tool poisoning via hidden instructions in MCP tool descriptions.
 - [GitHub MCP exploited (Invariant)](https://invariantlabs.ai/blog/mcp-github-vulnerability): Case study hijacking the GitHub MCP server via a malicious issue to reach private repos.
 - [Toxic Flow Analysis (Invariant)](https://invariantlabs.ai/blog/toxic-flow-analysis1): A 'toxic flows' prompt-injection class across agentic systems and MCP servers.
@@ -40,7 +40,7 @@ MCP lets an agent call your tools. That power is the whole attack surface. A too
 
 ### Firewalls and guardrails
 
-- [Invariant Guardrails](https://github.com/invariantlabs-ai/invariant) `* 437`: Rule-based guardrail layer that sits as an MCP/LLM proxy to intercept and check tool calls.
+- [Invariant Guardrails](https://github.com/invariantlabs-ai/invariant) `* 438`: Rule-based guardrail layer that sits as an MCP/LLM proxy to intercept and check tool calls.
 - [mcp-guard (General Analysis)](https://github.com/General-Analysis/mcp-guard) `* 55`: Guardrail wrapper that filters malicious tool calls and responses for MCP servers.
 - [MCP-Guard (GenTelLab)](https://github.com/GenTelLab/MCP-Guard) `* 21`: Detection framework, with an accompanying paper, for defending MCP integrations.
 - [promptfoo MCP red-teaming](https://www.promptfoo.dev/docs/red-team/mcp-security-testing/): promptfoo module for automated red-teaming and security testing of MCP servers.
@@ -54,7 +54,7 @@ MCP lets an agent call your tools. That power is the whole attack surface. A too
 
 ### Permission, scope, sandboxing
 
-- [agent-governance-toolkit (Microsoft)](https://github.com/microsoft/agent-governance-toolkit) `* 5.5k`: Toolkit for governance, access control, and policy over AI agents and MCP tools.
+- [agent-governance-toolkit (Microsoft)](https://github.com/microsoft/agent-governance-toolkit) `* 5.6k`: Toolkit for governance, access control, and policy over AI agents and MCP tools.
 - [clerk mcp-tools](https://github.com/clerk/mcp-tools) `* 48`: Clerk libraries for adding scoped auth and permission handling to MCP servers.
 
 ### Secrets and exfiltration (DLP)
