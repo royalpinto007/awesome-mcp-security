@@ -301,5 +301,12 @@
     "url": "https://github.com/royalpinto007/Skill-audit",
     "category": "scanners",
     "desc": "Security scanner for agent skills: 31 rules, prompt-injection and exfil detection, SARIF output."
+  },
+  {
+    "name": "MandateGuard",
+    "url": "https://github.com/ezequiellich44-cmd/MandateGuard",
+    "category": "guardrails",
+    "desc": "Deterministic payment policy engine for AI agents: budgets, allowlists, denylists, rate limits, signed Ed25519 mandates enforced before any money-moving tool executes - no LLM in the decision path.",
+    "repo": "ezequiellich44-cmd/MandateGuard"
   }
 ]
