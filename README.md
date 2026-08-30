@@ -17,7 +17,7 @@ MCP lets an agent call your tools. That power is the whole attack surface. A too
 **The one rule:** treat every tool description and every tool output as untrusted input, exactly like a web page. The categories below are the controls that make that practical.
 
 <!-- LIST:START -->
-**46 entries**, auto-refreshed weekly. Star counts updated **2026-08-24**. Browse the filterable version at **[mcp-security.agentpostmortem.com](https://mcp-security.agentpostmortem.com)**.
+**47 entries**, auto-refreshed weekly. Star counts updated **2026-08-24**. Browse the filterable version at **[mcp-security.agentpostmortem.com](https://mcp-security.agentpostmortem.com)**.
 
 ### Scanners and auditors
 
@@ -56,6 +56,7 @@ MCP lets an agent call your tools. That power is the whole attack surface. A too
 
 - [agent-governance-toolkit (Microsoft)](https://github.com/microsoft/agent-governance-toolkit) `* 6.1k`: Toolkit for governance, access control, and policy over AI agents and MCP tools.
 - [clerk mcp-tools](https://github.com/clerk/mcp-tools) `* 47`: Clerk libraries for adding scoped auth and permission handling to MCP servers.
+- [SandBase Harness](https://github.com/sandbaseai/sandbase-harness): Self-hosted runtime for governing MCP tool calls with permissions, approvals, credential handling, sandboxing, and audit/replay.
 
 ### Secrets and exfiltration (DLP)
 
