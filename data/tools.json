@@ -135,6 +135,13 @@
     "repo": "microsoft/agent-governance-toolkit"
   },
   {
+    "name": "SandBase Harness",
+    "url": "https://github.com/sandbaseai/sandbase-harness",
+    "category": "permission",
+    "desc": "Self-hosted runtime for governing MCP tool calls with permissions, approvals, credential handling, sandboxing, and audit/replay.",
+    "repo": "sandbaseai/sandbase-harness"
+  },
+  {
     "name": "clerk mcp-tools",
     "url": "https://github.com/clerk/mcp-tools",
     "category": "permission",
