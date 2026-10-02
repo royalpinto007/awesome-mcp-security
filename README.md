@@ -17,7 +17,7 @@ MCP lets an agent call your tools. That power is the whole attack surface. A too
 **The one rule:** treat every tool description and every tool output as untrusted input, exactly like a web page. The categories below are the controls that make that practical.
 
 <!-- LIST:START -->
-**47 entries**, auto-refreshed weekly. Star counts updated **2026-09-28**. Browse the filterable version at **[mcp-security.agentpostmortem.com](https://mcp-security.agentpostmortem.com)**.
+**48 entries**, auto-refreshed weekly. Star counts updated **2026-09-28**. Browse the filterable version at **[mcp-security.agentpostmortem.com](https://mcp-security.agentpostmortem.com)**.
 
 ### Scanners and auditors
 
@@ -29,6 +29,7 @@ MCP lets an agent call your tools. That power is the whole attack surface. A too
 - [SecScanMCP](https://github.com/zakariaf/SecScanMCP) `* 5`: MCP scanner with 12+ analyzers, 117 YARA rules, and ML-assisted detection of prompt injection and tool poisoning.
 - [skill-audit](https://github.com/royalpinto007/Skill-audit) `* 3`: Security scanner for agent skills: 31 rules, prompt-injection and exfil detection, SARIF output.
 - [mcp-audit](https://github.com/royalpinto007/MCP-audit) `* 0`: Security scanner for MCP servers: 18 rules, SARIF output, run with npx mcp-audit.
+- [AI Agent Repository Hardening Scanner](https://github.com/OssaBellator/ai-agent-hardening): Dependency-free static scanner and GitHub Action for AI-assisted repositories that inventories MCP and agent configuration, CI authority signals, and selected credential or permission-risk patterns without executing target code.
 
 ### Tool poisoning and injection
 

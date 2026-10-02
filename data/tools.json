@@ -308,5 +308,12 @@
     "url": "https://github.com/royalpinto007/Skill-audit",
     "category": "scanners",
     "desc": "Security scanner for agent skills: 31 rules, prompt-injection and exfil detection, SARIF output."
+  },
+  {
+    "name": "AI Agent Repository Hardening Scanner",
+    "repo": "OssaBellator/ai-agent-hardening",
+    "url": "https://github.com/OssaBellator/ai-agent-hardening",
+    "category": "scanners",
+    "desc": "Dependency-free static scanner and GitHub Action for AI-assisted repositories that inventories MCP and agent configuration, CI authority signals, and selected credential or permission-risk patterns without executing target code."
   }
 ]
