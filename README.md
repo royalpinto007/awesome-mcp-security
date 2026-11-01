@@ -17,7 +17,7 @@ MCP lets an agent call your tools. That power is the whole attack surface. A too
 **The one rule:** treat every tool description and every tool output as untrusted input, exactly like a web page. The categories below are the controls that make that practical.
 
 <!-- LIST:START -->
-**48 entries**, auto-refreshed weekly. Star counts updated **2026-09-28**. Browse the filterable version at **[mcp-security.agentpostmortem.com](https://mcp-security.agentpostmortem.com)**.
+**49 entries**, auto-refreshed weekly. Star counts updated **2026-09-28**. Browse the filterable version at **[mcp-security.agentpostmortem.com](https://mcp-security.agentpostmortem.com)**.
 
 ### Scanners and auditors
 
@@ -45,6 +45,7 @@ MCP lets an agent call your tools. That power is the whole attack surface. A too
 - [mcp-guard (General Analysis)](https://github.com/General-Analysis/mcp-guard) `* 55`: Guardrail wrapper that filters malicious tool calls and responses for MCP servers.
 - [MCP-Guard (GenTelLab)](https://github.com/GenTelLab/MCP-Guard) `* 23`: Detection framework, with an accompanying paper, for defending MCP integrations.
 - [promptfoo MCP red-teaming](https://www.promptfoo.dev/docs/red-team/mcp-security-testing/): promptfoo module for automated red-teaming and security testing of MCP servers.
+- [HOL Guard](https://github.com/hashgraph-online/hol-guard): Local security layer that checks supported AI-agent commands and MCP tool calls against policies before execution, with allow, block, and approval decisions.
 
 ### Secure gateways and proxies
 
